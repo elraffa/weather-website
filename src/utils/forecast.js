@@ -19,7 +19,7 @@ const forecast = (latitude, longitude, callback) => {
         `${body.daily.data[0].summary} Hola! La temperatura actual es de ${
           body.currently.temperature
         } grados y hay un ${body.currently.precipProbability *
-          100}% de probabilidad de lluvia. La humdedad es de ${body.currently
+          100}% de probabilidad de lluvia. La humedad es de ${body.currently
           .humidity * 100}% y la presión es de ${
           body.currently.pressure
         } hectopascales.`
