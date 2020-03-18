@@ -16,7 +16,9 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        `${body.daily.data[0].summary} Hola! La temperatura actual es de ${
+        `${
+          body.daily.data[0].summary
+        } Hola, Mica! La temperatura actual es de ${
           body.currently.temperature
         } grados y hay un ${body.currently.precipProbability *
           100}% de probabilidad de lluvia. La humedad es de ${body.currently

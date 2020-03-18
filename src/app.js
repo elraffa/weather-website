@@ -21,22 +21,22 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('', (req, res) => {
   res.render('index', {
-    title: 'Weather App',
-    name: 'Fred Raffa'
+    title: 'El clima para Mica',
+    name: 'Fede R.'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
-    title: 'About me',
-    name: 'Fred Raffa'
+    title: 'Acerca de mí',
+    name: 'Fede R'
   });
 });
 
 app.get('/help', (req, res) => {
   res.render('help', {
-    title: 'Help',
-    name: 'Freddy Raffa',
+    title: 'Ayuda',
+    name: 'Fede R.',
     msg: 'What can i help you with?'
   });
 });
@@ -44,7 +44,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
   if (!req.query.address) {
     return res.send({
-      error: 'You must provide an address'
+      error: 'Tenés que ingresar una dirección'
     });
   }
   geocode(
@@ -74,7 +74,7 @@ app.get('/weather', (req, res) => {
 app.get('/products', (req, res) => {
   if (!req.query.search) {
     return res.send({
-      error: 'You must provide a search term'
+      error: 'Tenés que ingresar una ciudad para buscar'
     });
   }
 
@@ -87,7 +87,7 @@ app.get('/help/*', (req, res) => {
   res.render('404', {
     title: 'Not Found',
     msg: 'Help article not found',
-    name: 'Freddy Raffa'
+    name: 'Fede R.'
   });
 });
 
@@ -95,7 +95,7 @@ app.get('*', (req, res) => {
   res.render('404', {
     title: '404 not found',
     msg: '404 Page Not Found',
-    name: 'Freddy Raffa'
+    name: 'Fede R.'
   });
 });
 
